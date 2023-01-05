@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52449658}
   - component: {fileID: 52449657}
+  - component: {fileID: 52449659}
   m_Layer: 0
   m_Name: fish41
   m_TagString: Untagged
@@ -207,6 +208,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52449659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52449656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3c4ae3f863b7c4e92d295da0ff930a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &558772760
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 790367067}
   - component: {fileID: 790367066}
+  - component: {fileID: 790367068}
   - component: {fileID: 790367065}
   m_Layer: 8
   m_Name: Puffefish
@@ -395,13 +409,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790367064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.66, y: 3.22, z: 0}
+  m_LocalPosition: {x: -1.84, y: 2.72, z: 0}
   m_LocalScale: {x: 0.064004645, y: 0.064004645, z: 0.064004645}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &790367068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790367064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f99d8db36069b2499ade818b3222ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &791391856
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791391858}
   - component: {fileID: 791391857}
+  - component: {fileID: 791391859}
   m_Layer: 0
   m_Name: fish51
   m_TagString: Untagged
@@ -486,6 +513,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791391859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791391856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213ed239a5adb3043824a37e5d0a0033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &824746869
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824746871}
   - component: {fileID: 824746870}
+  - component: {fileID: 824746872}
   m_Layer: 0
   m_Name: fish22
   m_TagString: Untagged
@@ -570,6 +610,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824746872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824746869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213ed239a5adb3043824a37e5d0a0033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &920316465
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920316467}
   - component: {fileID: 920316466}
+  - component: {fileID: 920316468}
   m_Layer: 0
   m_Name: fish21
   m_TagString: Untagged
@@ -654,6 +707,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920316468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920316465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213ed239a5adb3043824a37e5d0a0033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1021801035
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021801037}
   - component: {fileID: 1021801036}
+  - component: {fileID: 1021801038}
   m_Layer: 0
   m_Name: fish61
   m_TagString: Untagged
@@ -738,6 +804,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1021801038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021801035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213ed239a5adb3043824a37e5d0a0033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1148230324
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1148230326}
   - component: {fileID: 1148230325}
+  - component: {fileID: 1148230327}
   m_Layer: 0
   m_Name: fish11
   m_TagString: Untagged
@@ -822,6 +901,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1148230327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148230324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3c4ae3f863b7c4e92d295da0ff930a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1171962067
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171962069}
   - component: {fileID: 1171962068}
+  - component: {fileID: 1171962070}
   m_Layer: 0
   m_Name: fish1
   m_TagString: Untagged
@@ -906,6 +998,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1171962070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171962067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3c4ae3f863b7c4e92d295da0ff930a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1297938122
 GameObject:
   m_ObjectHideFlags: 0
