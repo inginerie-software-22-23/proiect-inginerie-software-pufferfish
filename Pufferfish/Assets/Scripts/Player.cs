@@ -4,13 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+[RequireComponent(typeof(BoxCollider2D))]
+
+public class Player : Collidable
 {
-    private BoxCollider2D boxCollider;
+    //INHERITED
+    //private BoxCollider2D boxCollider;
     private Vector3 moveDelta;
     private RaycastHit2D hit;
 
-    private void Start()
+
+
+    protected override void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
     }
