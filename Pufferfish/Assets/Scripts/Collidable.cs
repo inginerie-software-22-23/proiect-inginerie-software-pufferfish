@@ -8,7 +8,7 @@ public class Collidable : MonoBehaviour
     public ContactFilter2D filter;
     protected BoxCollider2D boxCollider;
     private Collider2D[] hits = new Collider2D[10];
-
+    
 
     protected virtual void Start()
     {
@@ -23,14 +23,14 @@ public class Collidable : MonoBehaviour
 
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i] == null)
+            if(hits[i] == null)
             {
                 continue;
             }
 
             //Debug.Log(hits[i].name);
             OnCollide(hits[i]);
-
+            
 
             //the array isn't cleared 
             hits[i] = null;
@@ -40,6 +40,6 @@ public class Collidable : MonoBehaviour
 
     protected virtual void OnCollide(Collider2D coll)
     {
-        Debug.Log(coll.name);
+        //Debug.Log(coll.name);
     }
 }

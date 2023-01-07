@@ -6,17 +6,16 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
-public class Player : MonoBehaviour
+public class Player : Collidable
 {
     //INHERITED
-    private BoxCollider2D boxCollider;
+    //private BoxCollider2D boxCollider;
     private Vector3 moveDelta;
-    private float playerx, playerz, playery;
-    //private RaycastHit2D hit;
+    private RaycastHit2D hit;
+    public float playerMass  = 1.06f;
 
 
-
-    private void Start()
+    protected override void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
     }
@@ -26,24 +25,66 @@ public class Player : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        // reset MoveDelta
+        // Reset MoveDelta
         moveDelta = new Vector3(x, y, 0);
         Vector3 currentScale = transform.localScale;
-        playerx = currentScale.x;
-        playery = currentScale.y;
-        playerz = currentScale.z;
 
         if (moveDelta.x > 0)
-        {
-            transform.localScale = new Vector3(Math.Abs(playerx),playery,playerz);
-        }
+            transform.localScale = new Vector3(Math.Abs(currentScale.x),currentScale.y, currentScale.z);
+
         else if (moveDelta.x < 0)
+            transform.localScale = new Vector3(-Math.Abs(currentScale.x), currentScale.y, currentScale.z);
+
+
+        //make sure we can move in y
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Player","Blocking"));
+        if(hit.collider == null)
         {
-            transform.localScale = new Vector3(-Math.Abs(playerx), playery, playerz);
+            //make fish move
+            transform.Translate(0, moveDelta.y * Time.deltaTime * 2, 0);
         }
-        transform.Translate(moveDelta * Time.deltaTime);    
+
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Player", "Blocking"));
+        if (hit.collider == null)
+        {
+            //make fish move
+            transform.Translate(moveDelta.x * Time.deltaTime * 2, 0, 0);
+            Debug.Log(x);
+        }
+
+        if(playerMass >= 70)
+        {
+            SceneManager.LoadScene("WinGameScene");
+        }
 
         //Debug.Log(x);
         //Debug.Log(y);
     }
+
+    protected void ReceiveMass(float size)
+    {
+        Vector3 currentScale = transform.localScale;
+
+        if(size >= 60)
+            SceneManager.LoadScene("WinGameScene");
+
+        if (size < playerMass)
+        {
+            playerMass = playerMass + 1.05f;
+            transform.localScale = new Vector3(Math.Abs(currentScale.x * 1.05f), currentScale.y * 1.05f, currentScale.z);
+        }
+        else
+        {
+            
+            Destroy(gameObject);
+            SceneManager.LoadScene("GameOverScene");
+            //game over
+        }
+
+    }
+
+ 
+
+
+
 }
