@@ -4,19 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 
-public class Player : MonoBehaviour
+public class Player : Collidable
 {
     //INHERITED
-    private BoxCollider2D boxCollider;
+    //private BoxCollider2D boxCollider;
     private Vector3 moveDelta;
     private float playerx, playerz, playery;
     private RaycastHit2D hit;
+    public float playerMass = 1.06f;
 
 
 
-    private void Start()
+    protected override void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
     }
@@ -47,13 +48,13 @@ public class Player : MonoBehaviour
         if(hit.collider == null)
         {
 
-            Debug.Log("not border");
+            //Debug.Log("not border");
             transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
         }
         else
         {
 
-            Debug.Log("border");
+            //Debug.Log("border");
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask( "Blocking"));
@@ -64,4 +65,27 @@ public class Player : MonoBehaviour
         }
         //Debug.Log(x);
     }
+
+    protected void ReceiveMass(float size)
+    {
+        Vector3 currentScale = transform.localScale;
+
+        //if (size >= 60)
+          //  SceneManager.LoadScene("WinGameScene");
+
+        if (size < playerMass)
+        {
+            playerMass = playerMass + 1.05f;
+            transform.localScale = new Vector3(Math.Abs(currentScale.x * 1.05f), currentScale.y * 1.05f, currentScale.z);
+        }
+        //else
+        //{
+            
+         //   Destroy(gameObject);
+          //  SceneManager.LoadScene("GameOverScene");
+           // //game over
+       // }
+
+    }
+
 }
