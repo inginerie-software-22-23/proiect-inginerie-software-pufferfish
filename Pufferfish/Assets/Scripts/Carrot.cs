@@ -12,9 +12,6 @@ public class Carrot : Collectable
         if (collected == false)
         {
             collected = true;
-
-
-
             coll.SendMessage("ReceiveMass", massCarrot);
 
             Debug.Log("Grant " + massCarrot + " mass");

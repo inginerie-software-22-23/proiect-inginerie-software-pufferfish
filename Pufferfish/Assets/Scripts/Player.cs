@@ -15,8 +15,6 @@ public class Player : Collidable
     private RaycastHit2D hit;
     public float playerMass = 1.06f;
 
-
-
     protected override void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
