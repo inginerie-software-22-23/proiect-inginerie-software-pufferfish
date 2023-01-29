@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarrotSpawnScript : MonoBehaviour
+public class CarrotSpawner : MonoBehaviour
 {
     public GameObject carrot;
     private float _randX;
