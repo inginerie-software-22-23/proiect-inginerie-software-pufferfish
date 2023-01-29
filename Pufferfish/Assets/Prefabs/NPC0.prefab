@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4909921626826256759}
   - component: {fileID: 4909921626826256757}
   - component: {fileID: 4909921626826256756}
+  - component: {fileID: -3718870742086591866}
   m_Layer: 0
   m_Name: NPC0
   m_TagString: Untagged
@@ -124,3 +125,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.91549873, y: 0.7083833}
   m_EdgeRadius: 0
+--- !u!114 &-3718870742086591866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909921626826256752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7231e8b1de60cac42aab09cdcc9ab572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  collected: 0
+  fishMass: 1.1
+  size: 0

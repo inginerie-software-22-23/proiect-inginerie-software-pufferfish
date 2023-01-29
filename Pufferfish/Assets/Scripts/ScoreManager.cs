@@ -10,8 +10,8 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highscoreText;
 
-    float score = 10;
-    int highscore = 0;
+    public float score = 10;
+    public int highScore = 0;
 
     private void Awake()
     {
@@ -21,9 +21,9 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        highscore = PlayerPrefs.GetInt("highscore", 0);
-        scoreText.text = "Mass: " + ((int)score).ToString();
-        highscoreText.text = "Highest Mass: " + highscore.ToString();
+        highScore = PlayerPrefs.GetInt("highscore", 0);
+        scoreText.text = "Mass: " + (int)score;
+        highscoreText.text = "Highest Mass: " + highScore;
 
     }
 
@@ -33,23 +33,29 @@ public class ScoreManager : MonoBehaviour
         
     }
 
-    public void AddMass()
+    public void AddMass(int mass)
     {
-        score += 10;
-        scoreText.text = "Mass: " + ((int)score).ToString();
-        if(highscore < score)
+        score += mass;
+        scoreText.text = "Mass: " + (int)score;
+        
+        if (highScore < score)
         {
-            PlayerPrefs.SetInt("highscore", (int)score);
+            PlayerPrefs.SetInt("highScore", (int)score);
         }
     }
+    
     public void SubtractMass()
     {
-        if(score >= 1)
-        score -= 0.4f;
-        scoreText.text = "Mass: " + ((int)score).ToString();
-        if (highscore < score)
+        if (score >= 1)
         {
-            PlayerPrefs.SetInt("highscore", (int)score);
+            score -= 0.4f;
+        }
+        
+        scoreText.text = "Mass: " + (int)score;
+        
+        if (highScore < score)
+        {
+            PlayerPrefs.SetInt("highScore", (int)score);
         }
     }
 }
