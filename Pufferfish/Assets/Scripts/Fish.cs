@@ -31,7 +31,7 @@ public class Fish : Collectable
 
     protected override void OnCollide(Collider2D coll)
     {
-        if (coll.name == "Player")
+        if (coll.name == "Player" && !CompareTag("Friendly"))
         {
             // in functia asta daca nu poate sa-l manance dam destroy player si game over
             coll.SendMessage("EatFish", fishMass);
