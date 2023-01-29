@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fish3RSpawner : MonoBehaviour
+public class Fish3RSpawner : MonoBehaviour
 {
     public GameObject fishR;
     float randY;
