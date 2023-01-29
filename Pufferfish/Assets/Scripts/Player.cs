@@ -50,9 +50,10 @@ public class Player : Collidable
 
             if (Math.Abs(currentScale.x) >= 0.06401)
             {
+                ScoreManager.instance.SubtractMass();
                 _movementSpeed = RunningSpeed;
-                playerMass = playerMass - 0.006f;
-                transform.localScale = new Vector3(currentScale.x * 0.997f, currentScale.y * 0.997f, currentScale.z);
+                playerMass = playerMass - 0.025f;
+                transform.localScale = new Vector3(currentScale.x * 0.9988f, currentScale.y * 0.9988f, currentScale.z);
 
 
             }
@@ -97,16 +98,17 @@ public class Player : Collidable
 
         if (size < playerMass)
         {
-            playerMass = playerMass + 1.05f;
+            ScoreManager.instance.AddMass();
+            playerMass = playerMass + 1.0f;
             transform.localScale = new Vector3(Math.Abs(currentScale.x * 1.05f), currentScale.y * 1.05f, currentScale.z);
         }
-        //else
-        //{
+        else
+        {
             
-         //   Destroy(gameObject);
-          //  SceneManager.LoadScene("GameOverScene");
-           // //game over
-       // }
+            Destroy(gameObject);
+            SceneManager.LoadScene("GameOverScene");
+            //game over
+        }
 
     }
 
