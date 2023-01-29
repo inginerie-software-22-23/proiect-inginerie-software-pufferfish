@@ -6,7 +6,7 @@ using UnityEngine;
 public class Carrot : Collectable
 {
     public Sprite eatenCarrot;
-    public float carrotMass = 1.05f;
+    public float carrotMass = 1f;
     
     protected override void OnCollect(Collider2D coll)
     {

@@ -31,7 +31,6 @@ public class Collidable : MonoBehaviour
             //Debug.Log(hits[i].name);
             OnCollide(hits[i]);
 
-
             //the array isn't cleared 
             hits[i] = null;
         }
