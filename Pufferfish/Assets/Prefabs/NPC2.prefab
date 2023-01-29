@@ -152,4 +152,4 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   collected: 0
-  fishMass: 10
+  fishMass: 19

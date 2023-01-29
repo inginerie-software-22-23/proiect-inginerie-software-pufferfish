@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6053313371607108294}
   m_Layer: 0
   m_Name: NPC5
-  m_TagString: Untagged
+  m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,4 +153,3 @@ MonoBehaviour:
     maxNormalAngle: 0
   collected: 0
   fishMass: 1.1
-  size: 0
