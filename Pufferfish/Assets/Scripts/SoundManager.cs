@@ -24,10 +24,12 @@ public class SoundManager : MonoBehaviour
         AudioListener.volume = volumeSlider.value;
         Save();
     }
+    
     private void Load()
     {
         volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
     }
+    
     private void Save()
     {
         PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
