@@ -49,11 +49,11 @@ public class Player : Collidable
     
     private void FixedUpdate()
     {
-        // if (playerMass >= 60)
-        // {
-        //     SceneManager.LoadScene("WinGameScene");   
-        // }
-        
+         if (playerMass >= 60)
+         {
+            SceneManager.LoadScene("WinGameScene");   
+         }
+
         Vector3 currentScale = transform.localScale;
         playerx = currentScale.x;
         playery = currentScale.y;
@@ -113,8 +113,8 @@ public class Player : Collidable
         else
         {
             Destroy(gameObject);
-            // SceneManager.LoadScene("GameOverScene");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+             SceneManager.LoadScene("GameOverScene");
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
