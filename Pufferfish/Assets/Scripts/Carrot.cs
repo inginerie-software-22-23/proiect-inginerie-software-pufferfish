@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Carrot : Collectable
 {
-    public Sprite eatenCarrot;
     public float carrotMass = 1f;
+    public SpriteRenderer spriteRenderer;
+    public Sprite eatenCarrotSprite;
+    public bool carrotEaten;
     
     protected override void OnCollect(Collider2D coll)
     {
@@ -16,7 +18,8 @@ public class Carrot : Collectable
             coll.SendMessage("EatCarrot", carrotMass);
 
             Debug.Log("Grant " + carrotMass + " mass");
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            spriteRenderer.sprite = eatenCarrotSprite;
         }
     }
 }

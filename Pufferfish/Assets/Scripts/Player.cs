@@ -8,15 +8,19 @@ using UnityEngine.SceneManagement;
 public class Player : Collidable
 {
     //INHERITED
-    //private BoxCollider2D boxCollider;
-    private const float RunningSpeed = 2f;
-    private const float NormalSpeed = 1.4f;
+    //movement
+    private const float RunningSpeed = 1.75f;
+    private const float NormalSpeed = 1.25f;
     private float _movementSpeed = NormalSpeed;
     private Vector3 moveDelta;
+    //scaling and sprinting
     private float playerx, playerz, playery;
     private RaycastHit2D hit;
     public float playerMass = 1f;
     private float baseX, baseY, baseZ;
+    //sounds
+    public AudioSource eatCarrot;
+    public AudioSource eatFish;
 
     protected override void Start()
     {
@@ -93,7 +97,8 @@ public class Player : Collidable
     protected void EatCarrot(float carrotMass)
     {
         Vector3 currentScale = transform.localScale;
-        // ScoreManager.instance.AddMass(10);
+        eatCarrot.Play();
+
         playerMass = playerMass + 1.0f;
         // transform.localScale = new Vector3(Math.Abs(currentScale.x * 1.05f), currentScale.y * 1.05f, currentScale.z);
     }
@@ -106,7 +111,7 @@ public class Player : Collidable
           
         if (fishMass < playerMass)
         {
-            // ScoreManager.instance.AddMass(10);
+            eatFish.Play();
             playerMass = playerMass + 1.0f;
             // transform.localScale = new Vector3(Math.Abs(currentScale.x * 1.05f), currentScale.y * 1.05f, currentScale.z);
         }

@@ -6,20 +6,37 @@ public class FishRight : MonoBehaviour
 {
     private int direction = -1;
     private Vector3 movement;
+    private Fish fish;
 
+    void Start()
+    {
+    public float speed = 1.0f;
+
+        fish = GetComponent<Fish>();
+    }
     void Update()
     {
-        Vector3 currentPosition = transform.position;
-        movement = new Vector3(direction, 0, 0);
-        if (currentPosition.x >= -10)
-            transform.position = transform.position + movement * Time.deltaTime;
+        if (!fish.isFishEaten)
+        {
+
+            Vector3 currentPosition = transform.position;
+            movement = new Vector3(direction*speed, 0, 0);
+            if (currentPosition.x >= -10)
+                transform.position = transform.position + movement * Time.deltaTime;
+            else
+                Destroy(gameObject);
+
+        }
         else
-            Destroy(gameObject);
+        {
+            direction = -1;
+            Vector3 currentPosition = transform.position;
+            movement = new Vector3(0, direction, 0);
+            if (currentPosition.y >= -6)
+                transform.position = transform.position + movement * Time.deltaTime;
+            else
+                Destroy(gameObject);
+        }
     }
 
-    /*  private void OnCollisionStay(Collision coll)
-      {
-          if (coll.gameObject.CompareTag("Box"))
-              direction = direction * -1;
-      }*/
 }

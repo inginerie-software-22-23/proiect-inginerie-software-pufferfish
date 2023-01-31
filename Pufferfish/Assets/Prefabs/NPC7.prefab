@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213ed239a5adb3043824a37e5d0a0033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.5
 --- !u!61 &7159803910449298474
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,3 +154,6 @@ MonoBehaviour:
     maxNormalAngle: 0
   collected: 0
   fishMass: 44
+  spriteRenderer: {fileID: 7159803910449298473}
+  fishEaten: {fileID: 21300000, guid: 83e80ae653b6b36458a97eb911e0dc6e, type: 3}
+  isFishEaten: 0
