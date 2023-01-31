@@ -9,8 +9,8 @@ public class Player : Collidable
 {
     //INHERITED
     //movement
-    private const float RunningSpeed = 2f;
-    private const float NormalSpeed = 1.4f;
+    private const float RunningSpeed = 1.75f;
+    private const float NormalSpeed = 1.25f;
     private float _movementSpeed = NormalSpeed;
     private Vector3 moveDelta;
     //scaling and sprinting

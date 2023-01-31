@@ -10,6 +10,7 @@ public class FishRight : MonoBehaviour
 
     void Start()
     {
+    public float speed = 1.0f;
 
         fish = GetComponent<Fish>();
     }
@@ -19,7 +20,7 @@ public class FishRight : MonoBehaviour
         {
 
             Vector3 currentPosition = transform.position;
-            movement = new Vector3(direction, 0, 0);
+            movement = new Vector3(direction*speed, 0, 0);
             if (currentPosition.x >= -10)
                 transform.position = transform.position + movement * Time.deltaTime;
             else

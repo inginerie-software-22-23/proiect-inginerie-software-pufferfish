@@ -3,11 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="460b7b83-1602-4e63-93bc-53f649314deb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pufferfish/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pufferfish/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NPC0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NPC0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NPC1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NPC1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NPC2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NPC2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NPC5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NPC5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NPC6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NPC6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NPC7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NPC7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FallingCarrot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FallingCarrot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishLeft.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishLeft.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishRight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishRight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
