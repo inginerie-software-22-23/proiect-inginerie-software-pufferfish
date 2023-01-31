@@ -114,8 +114,10 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   collected: 0
-  eatenCarrot: {fileID: 0}
   carrotMass: 1.05
+  spriteRenderer: {fileID: 6424597031352069751}
+  eatenCarrotSprite: {fileID: 21300000, guid: 3ac786151519ddc42bb17997fd77b913, type: 3}
+  carrotEaten: 0
 --- !u!61 &5297923913916938667
 BoxCollider2D:
   m_ObjectHideFlags: 0

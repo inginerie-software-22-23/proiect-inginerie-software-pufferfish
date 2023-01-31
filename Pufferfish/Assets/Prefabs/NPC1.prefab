@@ -154,3 +154,6 @@ MonoBehaviour:
     maxNormalAngle: 0
   collected: 0
   fishMass: 9
+  spriteRenderer: {fileID: 1149691047417190097}
+  fishEaten: {fileID: 21300000, guid: 9247e02b84a99084c9a1f0d89867d3f1, type: 3}
+  isFishEaten: 0
