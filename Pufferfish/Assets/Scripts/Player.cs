@@ -10,7 +10,7 @@ public class Player : Collidable
     //INHERITED
     //movement
     private const float RunningSpeed = 1.75f;
-    private const float NormalSpeed = 1.25f;
+    private const float NormalSpeed = 1.0f;
     private float _movementSpeed = NormalSpeed;
     private Vector3 moveDelta;
     //scaling and sprinting
@@ -37,6 +37,11 @@ public class Player : Collidable
     {
         base.Update();
         
+        if (playerMass >= 45)
+        {
+            SceneManager.LoadScene("WinGameScene");   
+        }
+        
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         moveDelta = new Vector3(x, y, 0);
@@ -51,29 +56,23 @@ public class Player : Collidable
             transform.localScale = new Vector3(-baseX * (float)Math.Pow(1.05, playerMass - 1), 
                 baseY * (float)Math.Pow(1.05, playerMass - 1), baseZ);
         }
-    }
-    
-    private void FixedUpdate()
-    {
-         if (playerMass >= 45)
-         {
-            SceneManager.LoadScene("WinGameScene");   
-         }
-
+        
         Vector3 currentScale = transform.localScale;
         playerx = currentScale.x;
         playery = currentScale.y;
         playerz = currentScale.z;
-
+        
         if (Input.GetKey(KeyCode.LeftShift))
         {
             if (Math.Abs(currentScale.x) >= 0.06401 && playerMass > 1.05f)
             {
                 _movementSpeed = RunningSpeed;
-                playerMass -= 0.025f;
+                playerMass -= 0.0025f;
             }
             else
+            {
                 _movementSpeed = NormalSpeed;
+            }
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {

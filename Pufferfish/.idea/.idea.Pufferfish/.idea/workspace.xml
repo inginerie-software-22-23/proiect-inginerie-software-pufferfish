@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="460b7b83-1602-4e63-93bc-53f649314deb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pufferfish/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pufferfish/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fish.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishLeft.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishLeft.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishRight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishRight.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
