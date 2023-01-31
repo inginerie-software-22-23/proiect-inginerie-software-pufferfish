@@ -22,6 +22,8 @@ public class Player : Collidable
     public AudioSource eatCarrot;
     public AudioSource eatFish;
 
+    public bool isGameOver = false;
+
     protected override void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -53,7 +55,7 @@ public class Player : Collidable
     
     private void FixedUpdate()
     {
-         if (playerMass >= 60)
+         if (playerMass >= 45)
          {
             SceneManager.LoadScene("WinGameScene");   
          }
@@ -67,10 +69,8 @@ public class Player : Collidable
         {
             if (Math.Abs(currentScale.x) >= 0.06401 && playerMass > 1.05f)
             {
-                // ScoreManager.instance.SubtractMass();
                 _movementSpeed = RunningSpeed;
                 playerMass -= 0.025f;
-                // transform.localScale = new Vector3(currentScale.x * 0.9988f, currentScale.y * 0.9988f, currentScale.z);
             }
             else
                 _movementSpeed = NormalSpeed;
@@ -96,30 +96,22 @@ public class Player : Collidable
 
     protected void EatCarrot(float carrotMass)
     {
-        Vector3 currentScale = transform.localScale;
         eatCarrot.Play();
-
-        playerMass = playerMass + 1.0f;
-        // transform.localScale = new Vector3(Math.Abs(currentScale.x * 1.05f), currentScale.y * 1.05f, currentScale.z);
+        playerMass += 1.0f;
     }
     
     protected void EatFish(float fishMass)
     {
-        Vector3 currentScale = transform.localScale;
-
-        Debug.Log("player mass: " + playerMass + ", NPC mass: " + fishMass);
-          
         if (fishMass < playerMass)
         {
             eatFish.Play();
-            playerMass = playerMass + 1.0f;
-            // transform.localScale = new Vector3(Math.Abs(currentScale.x * 1.05f), currentScale.y * 1.05f, currentScale.z);
+            playerMass += 1.0f;
         }
         else
         {
+            isGameOver = true;
             Destroy(gameObject);
-             SceneManager.LoadScene("GameOverScene");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

@@ -10,11 +10,11 @@ public class Fish : Collectable
     public Sprite fishEaten;
     public bool isFishEaten;
 
-
     protected override void Start()
     {
         base.Start();
         isFishEaten = false;
+        
         var player = GameObject.Find("Player");
         if (player)
         {
@@ -39,8 +39,12 @@ public class Fish : Collectable
         {
             // in functia asta daca nu poate sa-l manance dam destroy player si game over
             coll.SendMessage("EatFish", fishMass);
-            isFishEaten = true;
-            spriteRenderer.sprite = fishEaten;
+
+            if (!_player.isGameOver)
+            {
+                isFishEaten = true;
+                spriteRenderer.sprite = fishEaten;
+            }
         }
     }
 }

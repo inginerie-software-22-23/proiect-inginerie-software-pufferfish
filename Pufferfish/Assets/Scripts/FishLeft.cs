@@ -4,39 +4,46 @@ using UnityEngine;
 
 public class FishLeft : MonoBehaviour
 {
-    private int direction = 1;
-    private Vector3 movement;
+    private int _direction = 1;
+    private Vector3 _movement;
     public float speed = 1.0f;
-    private Fish fish;
+    private Fish _fish;
 
     void Start()
     {
-
-        fish = GetComponent<Fish>();
+        _fish = GetComponent<Fish>();
     }
+
     void Update()
     {
-        if (!fish.isFishEaten)
+        if (!_fish.isFishEaten)
         {
-
             Vector3 currentPosition = transform.position;
-            movement = new Vector3(direction*speed, 0, 0);
+            _movement = new Vector3(_direction * speed, 0, 0);
+
             if (currentPosition.x <= 10)
-                transform.position = transform.position + movement * Time.deltaTime;
+            {
+                transform.position += _movement * Time.deltaTime;
+            }
             else
+            {
                 Destroy(gameObject);
+            }
         }
         else
         {
-            direction = -1;
+            _direction = -1;
             Vector3 currentPosition = transform.position;
-            movement = new Vector3(0, direction, 0);
+            _movement = new Vector3(0, _direction, 0);
+
             if (currentPosition.y >= -6)
-                transform.position = transform.position + movement * Time.deltaTime;
+            {
+                transform.position += _movement * Time.deltaTime;
+            }
             else
+            {
                 Destroy(gameObject);
+            }
         }
     }
-
-    
 }
