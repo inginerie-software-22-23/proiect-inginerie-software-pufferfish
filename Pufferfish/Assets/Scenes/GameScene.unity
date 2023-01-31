@@ -2210,11 +2210,13 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  playerMass: 28
+  playerMass: 11
   eatCarrot: {fileID: 716788115}
   eatFish: {fileID: 1045575155}
   stage2Background: {fileID: 21300000, guid: 0ba5aa84a22e92143a3e65ad92ff45b0, type: 3}
   stage3Background: {fileID: 21300000, guid: 40097986c29d25540bffb7bbc06b44f0, type: 3}
+  stage2: 0
+  stage3: 0
   isGameOver: 0
 --- !u!1 &971933451
 GameObject:

@@ -67,6 +67,12 @@ public class Player : Collidable
         {
             SceneManager.LoadScene("WinGameScene");   
         }
+        else if (playerMass <= 0)
+        {
+            isGameOver = true;
+            Destroy(gameObject);
+            SceneManager.LoadScene("GameOverScene");
+        }
         
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
@@ -131,6 +137,21 @@ public class Player : Collidable
         {
             eatFish.Play();
             playerMass += 1.0f;
+        }
+        else if (fishMass >= 99.0f)
+        {
+            // poisonous fish: -10 mass
+            if (playerMass <= 10f)
+            {
+                isGameOver = true;
+                Destroy(gameObject);
+                SceneManager.LoadScene("GameOverScene");
+            }
+            else
+            {
+                eatFish.Play();
+                playerMass -= 10.0f;
+            }
         }
         else
         {
