@@ -6,20 +6,28 @@ public class FishRight : MonoBehaviour
 {
     private int _direction = -1;
     private Vector3 _movement;
-    private Fish _fish;
     public float speed = 1.0f;
+    private float _stageSpeed = 1.0f;
+    private Fish _fish;
+    private Player _player;
 
     void Start()
     {
         _fish = GetComponent<Fish>();
+        _player = GameObject.Find("Player").GetComponent<Player>();
     }
     
     void Update()
     {
+        if (_player.stage3)
+        {
+            _stageSpeed = 1.5f;
+        }
+        
         if (!_fish.isFishEaten)
         {
             Vector3 currentPosition = transform.position;
-            _movement = new Vector3(_direction*speed, 0, 0);
+            _movement = new Vector3(_direction * _stageSpeed * speed, 0, 0);
 
             if (currentPosition.x >= -10)
             {

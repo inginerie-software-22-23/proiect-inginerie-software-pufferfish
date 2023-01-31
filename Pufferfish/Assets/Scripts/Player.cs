@@ -7,21 +7,30 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Player : Collidable
 {
-    //INHERITED
-    //movement
-    private const float RunningSpeed = 1.75f;
-    private const float NormalSpeed = 1.0f;
-    private float _movementSpeed = NormalSpeed;
+    // INHERITED
+    // movement
+    private float RunningSpeed = 1.75f;
+    private float NormalSpeed = 1.0f;
+    private float _movementSpeed;
     private Vector3 moveDelta;
-    //scaling and sprinting
+    
+    // scaling and sprinting
     private float playerx, playerz, playery;
     private RaycastHit2D hit;
     public float playerMass = 1f;
     private float baseX, baseY, baseZ;
-    //sounds
+    
+    // sounds
     public AudioSource eatCarrot;
     public AudioSource eatFish;
 
+    // background
+    private SpriteRenderer _background;
+    public Sprite stage2Background;
+    public Sprite stage3Background;
+
+    public bool stage2 = false;
+    public bool stage3 = false;
     public bool isGameOver = false;
 
     protected override void Start()
@@ -31,13 +40,30 @@ public class Player : Collidable
         baseX = currentScale.x;
         baseY = currentScale.y;
         baseZ = currentScale.z;
+
+        _background = GameObject.Find("Background").GetComponent<SpriteRenderer>();
     }
 
     protected override void Update()
     {
         base.Update();
-        
-        if (playerMass >= 45)
+
+        if (playerMass >= 15 && playerMass < 30 && !stage2)
+        {
+            // load stage 2
+            _background.sprite = stage2Background;
+            stage2 = true;
+
+        }
+        else if (playerMass >= 30 && playerMass < 45 && !stage3)
+        {
+            // load stage 3
+            _background.sprite = stage3Background;
+            NormalSpeed = 0.8f;
+            RunningSpeed = 1.5f;
+            stage3 = true;
+        }
+        else if (playerMass >= 45)
         {
             SceneManager.LoadScene("WinGameScene");   
         }
@@ -74,7 +100,7 @@ public class Player : Collidable
                 _movementSpeed = NormalSpeed;
             }
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else
         {
             _movementSpeed = NormalSpeed;
         }
