@@ -9,11 +9,17 @@ public class CarrotSpawner : MonoBehaviour
     private Vector2 _whereToSpawn;
     public float spawnRate = 7f;
     private float _nextSpawn = 0.5f;
+    private Player _player;
 
+    void Start()
+    {
+        _player = GameObject.Find("Player").GetComponent<Player>();
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > _nextSpawn)
+        if (Time.time > _nextSpawn && !_player.stage2)
         {
             _nextSpawn = Time.time + spawnRate;
             _randX = Random.Range(-8.38f, 8.58f);
