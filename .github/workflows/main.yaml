@@ -40,7 +40,7 @@ jobs:
       - name: Restore Library cache
         uses: actions/cache@v2
         with:
-          path: ../Pufferfish/Library
+          path: Pufferfish/Library
           key: Library-Pufferfish-${{ matrix.targetPlatform }}
           restore-keys: |
             Library-Pufferfish-
@@ -50,7 +50,7 @@ jobs:
         uses: game-ci/unity-test-runner@v2
         id: testRunner
         with:
-          projectPath: ../Pufferfish
+          projectPath: Pufferfish
           testMode: ${{ matrix.testMode }}
           checkName: ${{ matrix.testMode }} Test Results
           githubToken: ${{ secrets.GITHUB_TOKEN }}
