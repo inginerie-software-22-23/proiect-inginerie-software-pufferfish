@@ -8,12 +8,12 @@
 
 ### Sprint 1
 - [Report](https://docs.google.com/document/d/14DCD_PbO-Xr0Ow4tzTyid7ZE9XmOcN41Nsu5NcEPHrQ/edit?usp=sharing)
-- [Demo]()
+- [Demo](https://www.youtube.com/watch?v=NiwcyQm96Ik)
 
 ### Sprint 2
 - [Report](https://docs.google.com/document/d/1vXXHNTpHkyXm49sMEhxYQPD48No70TlZcpOF1TNO9PM/edit?usp=sharing)
-- [Demo]()
+- [Demo](https://www.youtube.com/watch?v=QjVRHsx_X9k)
 
 ### Sprint 3
 - [Report](https://docs.google.com/document/d/1jdJbBmfyEX6H_GKEekMJNsf_M1WKViQaAoLk06ihiqU/edit?usp=sharing)
-- [Demo]()
+- [Demo](https://www.youtube.com/watch?v=1MT5lHSN5yo)
