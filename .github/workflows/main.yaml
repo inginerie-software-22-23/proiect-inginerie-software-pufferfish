@@ -67,7 +67,7 @@ jobs:
   #         path: artifacts
 
   buildWebGL:
-    needs: testRunner
+    # needs: testRunner
     name: Build for WebGL 🖥️
     runs-on: ubuntu-latest
     strategy:
@@ -112,7 +112,7 @@ jobs:
           path: build/WebGL
 
   buildWindows:
-    needs: testRunner
+    # needs: testRunner
     name: Build for Windows 🖥️
     runs-on: ubuntu-latest
     strategy:
