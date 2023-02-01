@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="460b7b83-1602-4e63-93bc-53f649314deb" name="Changes" comment="" />
+    <list default="true" id="460b7b83-1602-4e63-93bc-53f649314deb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pufferfish/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pufferfish/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
