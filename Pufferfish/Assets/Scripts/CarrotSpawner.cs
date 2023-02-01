@@ -11,7 +11,7 @@ public class CarrotSpawner : MonoBehaviour
     private float _nextSpawn = 0.5f;
     private Player _player;
 
-    void Start()
+    public void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player>();
     }
