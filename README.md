@@ -2,7 +2,7 @@
 
 - [Intermediate Deliverable](https://github.com/inginerie-software-22-23/proiect-inginerie-software-pufferfish/blob/main/Intermediate%20Deliverable.pdf)
 - [Software Architecture Report](https://docs.google.com/document/d/1CHuTSfcWhRwcE4k__BCwueTYdEehAa-W59TXcl-0EV0/edit?usp=sharing)
-- [Testing Report]()
+- [Testing Report](https://docs.google.com/document/d/11dfLOugQHL94pbnA_q6UmnFSt6f8wkrWIB16K4apyqo/edit?usp=sharing)
 
 ## Sprints
 
