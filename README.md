@@ -4,6 +4,10 @@
 - [Software Architecture Report](https://docs.google.com/document/d/1CHuTSfcWhRwcE4k__BCwueTYdEehAa-W59TXcl-0EV0/edit?usp=sharing)
 - [Testing Report](https://docs.google.com/document/d/11dfLOugQHL94pbnA_q6UmnFSt6f8wkrWIB16K4apyqo/edit?usp=sharing)
 
+## State diagram
+
+![Untitled Workspace](https://user-images.githubusercontent.com/72975663/216795041-2695b839-ff7e-4285-9d81-0fd1780b07d7.png)
+
 ## Sprints
 
 ### Sprint 1
